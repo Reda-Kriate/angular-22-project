@@ -1,6 +1,6 @@
 <header class="navbar-shadow p-3 m-4">
   <div class="container flex justify-content-between align-items-center">
-      <a class="navbar-logo flex gap-2 align-items-center" >
+      <a class="navbar-logo flex gap-2 align-items-center" routerLink="/prompts" >
         <img src="/logo-prompt-hub.png" alt="logo" width="36" height="36">
         Prompt Hub
       </a>
@@ -9,7 +9,7 @@
                 [icon]="isDark() ? 'pi pi-sun' : 'pi pi-moon' "
                 (onClick)="toggleDarkMode()"
                 severity="secondary"></p-button>
-      <p-button icon="pi pi-plus" size="small" label="Ajouter"></p-button>
+      <p-button icon="pi pi-plus" size="small" label="Ajouter" routerLink="/prompts/create"></p-button>
     </div>
   </div>
 </header>

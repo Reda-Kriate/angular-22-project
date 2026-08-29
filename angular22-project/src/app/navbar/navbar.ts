@@ -1,17 +1,18 @@
 import { Component, signal } from '@angular/core'
 import { Button } from 'primeng/button'
+import { RouterLink } from '@angular/router'
 
 @Component({
   selector: 'app-navbar',
-  imports: [Button],
+  imports: [Button, RouterLink],
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss',
 })
 export class Navbar {
-    isDark = signal(false)
+  isDark = signal(false)
 
   toggleDarkMode() {
-    this.isDark.update(value => !value)
+    this.isDark.update((value) => !value)
     document.documentElement.classList.toggle('app-dark', this.isDark())
   }
 }
