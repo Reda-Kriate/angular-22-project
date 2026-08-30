@@ -8,14 +8,22 @@ import { environment } from '../../environments/environment'
   providedIn: 'root',
 })
 export class PromptService {
-
   httpClient = inject(HttpClient)
   url = environment.apiUrl + `prompts`
 
   getPrompts() {
     return this.httpClient.get<PromptModel[]>(this.url)
   }
-  savePrompt(prompt :{ title: string; content: string; categoryId: number }) {
+  getOnePrompt(id: number) {
+    return this.httpClient.get<PromptModel>(this.url + '/' + id)
+  }
+  updateOnePrompt(id: number, prompt: { title: string; content: string; categoryId: number }) {
+    return this.httpClient.put(this.url + '/' + id, prompt)
+  }
+  savePrompt(prompt: { title: string; content: string; categoryId: number }) {
     return this.httpClient.post<PromptModel>(this.url, prompt)
+  }
+  deletePrompt(id: number) {
+    return this.httpClient.delete(this.url + '/' + id)
   }
 }

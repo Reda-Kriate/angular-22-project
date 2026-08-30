@@ -70,24 +70,6 @@
       "userId": 3,
       "score": 0,
       "createdAt": "2025-02-01T08:45:00.000Z"
-    },
-    {
-      "id": 6,
-      "title": "Helloooo ",
-      "content": "salut tous le monde",
-      "categoryId": 4,
-      "userId": 1,
-      "score": 0,
-      "createdAt": "2026-08-29T19:16:57.648Z"
-    },
-    {
-      "id": 7,
-      "title": "IA generative",
-      "content": "rien !",
-      "categoryId": 4,
-      "userId": 1,
-      "score": 0,
-      "createdAt": "2026-08-29T19:17:58.382Z"
     }
   ],
   "votes": [
