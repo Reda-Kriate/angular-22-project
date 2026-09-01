@@ -5,6 +5,10 @@
         Prompt Hub
       </a>
     <div class="flex gap-2 align-items-center">
+      <p-button severity="secondary"
+                label="Connexion"
+                routerLink="auth"
+                size="small"></p-button>
       <p-button size="small"
                 [icon]="isDark() ? 'pi pi-sun' : 'pi pi-moon' "
                 (onClick)="toggleDarkMode()"
